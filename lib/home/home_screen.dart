@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamic/home/hadeth/hadeth_tab.dart';
 import 'package:islamic/home/quarn/quarn_tab.dart';
-import 'package:islamic/home/radio/radio_tab.dart';
 import 'package:islamic/home/sebha/sebha_tab.dart';
 import 'package:islamic/home/settings/settings_tab.dart';
 import 'package:islamic/providers/app_config_provider.dart';
@@ -55,9 +54,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     icon: ImageIcon(AssetImage("assets/images/sebha.png")),
                     label: AppLocalizations.of(context)!.sebha),
                 BottomNavigationBarItem(
-                    icon: ImageIcon(AssetImage("assets/images/radio.png")),
-                    label: AppLocalizations.of(context)!.radio),
-                BottomNavigationBarItem(
                     icon: Icon(Icons.settings),
                     label: AppLocalizations.of(context)!.settings),
               ],
@@ -73,7 +69,6 @@ class _HomeScreenState extends State<HomeScreen> {
     QuarnTab(),
     HadethTab(),
     SebhaTab(),
-    RadioTab(),
     SettingsTab(),
   ];
 }
