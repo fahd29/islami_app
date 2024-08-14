@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamic/app_colors.dart';
 import 'package:islamic/home/quarn/item_sura_name.dart';
+import 'package:islamic/providers/app_config_provider.dart';
+import 'package:provider/provider.dart';
 
 class QuarnTab extends StatelessWidget {
   List<String> names = [
@@ -122,15 +125,18 @@ class QuarnTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     return Column(
       children: [
         Expanded(child: Image.asset("assets/images/quarn_logo-1.png")),
         Divider(
-          color: AppColors.bottom_nav_color,
+          color: provider.appTheme == ThemeMode.dark
+              ? AppColors.yellow_color
+              : AppColors.bottom_nav_color,
           thickness: 3,
         ),
         Text(
-          "surah name",
+          AppLocalizations.of(context)!.sura_name,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
         Divider(
@@ -142,7 +148,9 @@ class QuarnTab extends StatelessWidget {
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Divider(
-                color: AppColors.bottom_nav_color,
+                color: provider.appTheme == ThemeMode.dark
+                    ? AppColors.yellow_color
+                    : AppColors.bottom_nav_color,
                 thickness: 2,
               );
             },

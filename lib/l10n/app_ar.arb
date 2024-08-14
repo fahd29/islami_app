@@ -5,5 +5,12 @@
 "hadeth" : "الحديث",
 "radio" : "الاذاعه",
 "sebha"   : "السبحه",
-"hadeth_name" : "اسم الحديث"
+"hadeth_name" : "اسم الحديث",
+"settings" : "الاعدادات",
+"language" : "اللغه",
+"arabic" : "العربيه",
+"english" : "الانجليزيه",
+"theme" : "النمط",
+"light" : "مضئ",
+"dark" : "ليلي"
 }

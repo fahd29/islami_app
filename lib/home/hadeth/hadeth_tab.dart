@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islamic/home/hadeth/item_hadeth_name.dart';
+import 'package:provider/provider.dart';
 
 import '../../app_colors.dart';
+import '../../providers/app_config_provider.dart';
 
 class HadethTab extends StatefulWidget {
   @override
@@ -14,20 +17,25 @@ class _HadethTabState extends State<HadethTab> {
 
   @override
   Widget build(BuildContext context) {
+    var provider = Provider.of<AppConfigProvider>(context);
     loadHadethFile();
     return Column(
       children: [
         Expanded(child: Image.asset("assets/images/hadith_logo.png")),
         Divider(
-          color: AppColors.bottom_nav_color,
+          color: provider.appTheme == ThemeMode.dark
+              ? AppColors.yellow_color
+              : AppColors.bottom_nav_color,
           thickness: 3,
         ),
         Text(
-          "hadeth name",
+          AppLocalizations.of(context)!.hadeth_name,
           style: Theme.of(context).textTheme.bodyMedium,
         ),
         Divider(
-          color: AppColors.bottom_nav_color,
+          color: provider.appTheme == ThemeMode.dark
+              ? AppColors.yellow_color
+              : AppColors.bottom_nav_color,
           thickness: 3,
         ),
         Expanded(

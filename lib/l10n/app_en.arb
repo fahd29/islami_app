@@ -5,5 +5,13 @@
 "hadeth" : "Hadeth",
 "radio" : "Radio",
 "sebha":"Sebha",
-"hadeth_name" : "Hadeth Name"
+"hadeth_name" : "Hadeth Name",
+"settings" : "Settings",
+"language" : "Language",
+"arabic" : "Arabic",
+"english" : "English",
+"theme" : "Theme",
+"light" : "Light",
+"dark" : "Dark"
+
 }
