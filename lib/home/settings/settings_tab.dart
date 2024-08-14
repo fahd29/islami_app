@@ -80,7 +80,7 @@ class _SettingsTabState extends State<SettingsTab> {
                   children: [
                     Text(
                       provider.appTheme == ThemeMode.dark
-                          ? AppLocalizations.of(context)!.light
+                          ? AppLocalizations.of(context)!.dark
                           : AppLocalizations.of(context)!.light,
                       style: TextStyle(
                         fontSize: 28,
